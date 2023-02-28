@@ -1,15 +1,25 @@
 
 
 {{ define "main" }}
-    <main aria-role="main">
-      <header class="homepage-header">
-        <h1>{{.Title}}</h1>
-        {{ with .Params.subtitle }}
-        <span class="subtitle">{{.}}</span>
-        {{ end }}
-      </header>
-      <div class="homepage-content">
-        {{.Content}}
-      </div>
-    </main>
+  <section id="banner">
+    <p>
+      Explore the heart of Davidson on a self-guided tour in support of
+      <a href="https://www.dc-childdevelopmentcenter.org/">Davidson-Cornelius Child Development Center</a>
+    </p>
+    <button>Tickets →</button> 
+  </section>
+  <section id="map">
+    {{ $image := (resources.GetMatch "images/map.png") }}
+    <img src="{{ $image.RelPermalink }}" />
+  </section>
+  <section id="sponsors"></section>
+  <section id="tickets"></section>
+  <section id="faq">
+</section>
+
+  <main aria-role="main">
+    <div class="homepage-content">
+      {{.Content}}
+    </div>
+  </main>
 {{ end }}
