@@ -19,11 +19,36 @@
   </section>
   <section id="tickets" class="line">
     <header>Tickets</header>
+
     <span>April 29, 2023</span>
     <span>10am - 4pm</span>
+    <p>The Davidson Home & Village Tour is an opportunity to explore the heart of Davidson through hand-picked homes and village sites.</p>
+    <p>Come experience a range of diverse architectural styles, inspiring interior design, historical significance, art displays, and more! Each space will be staffed by a docent and stories as if the walls could talk.</p>
   </section>
+
   <section id="faq" class="line">
     <header>FAQ</header>
+    <ul>
+      <li>
+        <strong>Where do I park?</strong>
+        <p>Free parking is available throughout the town in designated spaces. The walking tour begins at the Davidson green in front of the Library.</p>
+      <li>
+        <strong>What is included in the ticket?</strong>
+        <p>Self-guided walking tour of the homes which includes designated access inside the home as determined by the homeowner.</p>
+      </li>
+      <li>
+        <strong>Are pets allowed on the tour?</strong>
+        <p>While we love pets, they are not permitted on the tour.</p>
+      </li>
+      <li>
+        <strong>What is included in the ticket?</strong>
+        <p>Self-guided walking tour of the homes which includes designated access inside the home as determined by the homeowner.</p>
+      </li>
+      <li>
+        <strong>Can I drive the tour route?</strong>
+        <p>No, there is not parking spaces available at homes. All houses and sites are selected to be within walking distance from the check in location.</p>
+      </li>
+    </ul>
   </section>
 
   <main aria-role="main">
@@ -39,28 +64,32 @@
   let startTop;
   let startLeft;
   const logo = document.getElementById('logo');
-  document.addEventListener('DOMContentLoaded', () => {
+  function calculatePosition() {
+    console.log('scroll');
     w = window.innerWidth;
     h = window.innerHeight;
     const rect = logo.getBoundingClientRect();
-    console.log(rect);
     startTop = h / 2 - rect.width / 2;
     startLeft = logo.style.width = w / 2 - rect.height / 2;
     logo.style.top = `${startTop}px`;
     logo.style.left = `${startLeft}px`;
-    console.log(startTop, startLeft);
-    console.log('rady');
-  });
-  document.addEventListener('scroll', (event) => {
+
+    redraw();
+  }
+  document.addEventListener('DOMContentLoaded', calculatePosition);
+  window.addEventListener('resize', calculatePosition);
+  document.addEventListener('scroll', redraw);
+
+  function redraw() {
     const targetYPosition = startTop - window.scrollY;
     logo.style.top = `${Math.max(targetYPosition, 0)}px`;
     if (targetYPosition < 0) {
       const targetXPosition = startTop + startLeft - window.scrollY;
       logo.style.left = `${Math.max(targetXPosition, 0)}px`;
     }
-  });
-
+  }
 })();
+
 (function keyboard() {
   function toggleTheme() {
     document.body.classList.toggle('dark');
