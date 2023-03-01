@@ -1,8 +1,86 @@
-#banner {
+ * {
+   scroll-behavior: smooth;
+ }
 
+@keyframes fadeInAnimation {
+  0% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes fadeUpAnimation {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }
 
-#map {}
+button#tickets {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+h1#logo {
+  position: fixed;
+  z-index: 1;
+  animation: fadeInAnimation ease 1s;
+  padding: 1.5rem;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  background: var(--theme);
+}
+#cta {
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  max-width: 45em;
+  margin: 90vh auto 0;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  align-items: center;
+
+  animation: fadeUpAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+#cta a {
+  width: 12em;
+}
+
+.button,
+button {
+  display: inline-block;
+  background: var(--theme-inverse);
+  padding: 0.333em 0.666em;
+  color: var(--theme);
+  border-bottom: 2px solid var(--theme);
+}
+
+
+.line {
+  margin: 0 5%;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  height: 12rem;
+  position: relative;
+}
+.line header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.875rem;
+}
+
+#map {
+}
 
 #sponsors {}
 #tickets {}

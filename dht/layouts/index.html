@@ -1,25 +1,75 @@
 
 
 {{ define "main" }}
-  <section id="banner">
+  <button id="tickets">Tickets →</button> 
+  <h1 id="logo">Davidson <br />Home <br />Tour</h1>
+  <section id="cta">
     <p>
       Explore the heart of Davidson on a self-guided tour in support of
-      <a href="https://www.dc-childdevelopmentcenter.org/">Davidson-Cornelius Child Development Center</a>
+      <a href="https://www.dc-childdevelopmentcenter.org/">Davidson-Cornelius Child Development Center</a>.
     </p>
-    <button>Tickets →</button> 
+    <a href="#map" class="button">Learn more ↓</a> 
   </section>
   <section id="map">
     {{ $image := (resources.GetMatch "images/map.png") }}
     <img src="{{ $image.RelPermalink }}" />
   </section>
-  <section id="sponsors"></section>
-  <section id="tickets"></section>
-  <section id="faq">
-</section>
+  <section id="sponsors" class="line">
+    <header>Generously supported by</header>
+  </section>
+  <section id="tickets" class="line">
+    <header>Tickets</header>
+    <span>April 29, 2023</span>
+    <span>10am - 4pm</span>
+  </section>
+  <section id="faq" class="line">
+    <header>FAQ</header>
+  </section>
 
   <main aria-role="main">
     <div class="homepage-content">
       {{.Content}}
     </div>
   </main>
+<script>
+
+(function logoScroller() {
+  let w;
+  let h;
+  let startTop;
+  let startLeft;
+  const logo = document.getElementById('logo');
+  document.addEventListener('DOMContentLoaded', () => {
+    w = window.innerWidth;
+    h = window.innerHeight;
+    const rect = logo.getBoundingClientRect();
+    console.log(rect);
+    startTop = h / 2 - rect.width / 2;
+    startLeft = logo.style.width = w / 2 - rect.height / 2;
+    logo.style.top = `${startTop}px`;
+    logo.style.left = `${startLeft}px`;
+    console.log(startTop, startLeft);
+    console.log('rady');
+  });
+  document.addEventListener('scroll', (event) => {
+    const targetYPosition = startTop - window.scrollY;
+    logo.style.top = `${Math.max(targetYPosition, 0)}px`;
+    if (targetYPosition < 0) {
+      const targetXPosition = startTop + startLeft - window.scrollY;
+      logo.style.left = `${Math.max(targetXPosition, 0)}px`;
+    }
+  });
+
+})();
+(function keyboard() {
+  function toggleTheme() {
+    document.body.classList.toggle('dark');
+  }
+  document.addEventListener('keypress', event => {
+    switch (event.key) {
+      case '?': return toggleTheme();
+    }
+  });
+})();
+</script>
 {{ end }}
