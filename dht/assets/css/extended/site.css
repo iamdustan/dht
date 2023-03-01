@@ -27,6 +27,7 @@ button#tickets {
   position: fixed;
   top: 1.5rem;
   right: 1.5rem;
+  z-index: 1;
 }
 h1#logo {
   position: fixed;
@@ -68,15 +69,18 @@ button {
 
 .line {
   margin: 0 5%;
-  border-top: 1px solid rgba(255,255,255,0.05);
-  height: 12rem;
+  border-top: 1px solid var(--theme-inverse-opaque);
+  padding: 3rem 5%;
   position: relative;
 }
 .line header {
   position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 0.875rem;
+  top: 0.25em;
+  right: 1em;
+  cursor: default;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 #map {
@@ -86,3 +90,10 @@ button {
 #tickets {}
 #faq {}
 
+
+
+.footer {
+  margin: 1.5rem 5%;
+  font-size: 0.875rem;
+  text-align: right;
+}
