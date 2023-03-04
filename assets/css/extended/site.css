@@ -130,9 +130,19 @@ button {
 }
 .line.open .line--toggle {
   max-height: 1000px;
-  transition: 0.2s ease-out all;
   transform: rotate(135deg);
   top: -1rem;
+}
+.line.open .line--header,
+.line.open .line--contents,
+.line.open .line--toggle {
+  transition: 0.333s ease-out all;
+}
+
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 13px;
+  }
 }
 
 .line--contents {
