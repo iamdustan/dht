@@ -44,7 +44,7 @@ a#tickets {
   flex-direction: row;
   gap: 1rem;
   max-width: 45em;
-  margin: 90vh auto 0;
+  margin: 80vh auto 0;
   padding: 1.5rem;
   background: rgba(255, 255, 255, 0.05);
   align-items: center;
