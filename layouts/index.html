@@ -85,16 +85,17 @@
   let startLeft;
   const logo = document.getElementById('logo');
   function calculatePosition() {
-    console.log('scroll');
-    w = window.innerWidth;
-    h = window.innerHeight;
-    const rect = logo.getBoundingClientRect();
-    startTop = h / 2 - rect.width / 2;
-    startLeft = logo.style.width = w / 2 - rect.height / 2;
-    logo.style.top = `${startTop}px`;
-    logo.style.left = `${startLeft}px`;
+    requestAnimationFrame(() => {
+      w = window.innerWidth;
+      h = window.innerHeight;
+      const rect = logo.getBoundingClientRect();
+      startTop = h / 2 - rect.width / 2;
+      startLeft = logo.style.width = w / 2 - rect.height / 2;
+      logo.style.top = `${startTop}px`;
+      logo.style.left = `${startLeft}px`;
 
-    redraw();
+      redraw();
+    });
   }
   document.addEventListener('DOMContentLoaded', calculatePosition);
   window.addEventListener('resize', calculatePosition);
