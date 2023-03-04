@@ -17,9 +17,9 @@
   <section id="sponsors" class="line">
     <header class="line--headersmall">Generously supported by</header>
   </section>
-  <section id="tickets" class="line open">
-      <h2 class="line--header">Tickets</h2>
-      <button class="line--toggle" aria-label="Toggle Tickets content">+</button>
+  <section id="tickets" class="line">
+      <h2 class="line--header">Event</h2>
+      <button class="line--toggle" aria-label="Toggle Event contents">+</button>
 
     <div class="line--contents">
       <div class="datetime">
@@ -30,6 +30,16 @@
         <p>The Davidson Home & Village Tour is an opportunity to explore the heart of Davidson through hand-picked homes and village sites.</p>
         <p>Come experience a range of diverse architectural styles, inspiring interior design, historical significance, art displays, and more! Each space will be staffed by a docent and stories as if the walls could talk.</p>
       </div>
+    </div>
+  </section>
+
+  <section id="sponsorship" class="line">
+    <h2 class="line--header">Sponsorship</h2>
+    <button class="line--toggle" aria-label="Toggle Sponsorship Opportunities">+</button>
+
+    <div class="line--contents">
+      <p>Sponsorship opportunities are available to support the Davidson Home & Village Tour and the Davidson-Cornelius Child Development Center.</p>
+      <a href="/sponsorship" class="button">Learn more →</a>
     </div>
   </section>
 
@@ -134,7 +144,6 @@
 
   on('click', '.line.open .line--toggle', (e) => {
     const targetLine = e.target.closest('.line');
-    console.log('yah?', targetLine)
     targetLine.classList.remove('open');
   });
   on('mouseenter', '.line', e => {

@@ -88,6 +88,9 @@ button {
 .line.fade {
   opacity: 0.4;
 }
+.line.open {
+  opacity: 1;
+}
 .line--headersmall {
   position: absolute;
   top: 0.25em;
@@ -111,6 +114,7 @@ button {
   transition: 0.333s ease-in all;
 }
 .line--contents {
+  max-height: 0;
   opacity: 0;
   transform: scale(0.9) translateY(-10vh);
   transition: 0.333s ease-in all;
@@ -125,6 +129,7 @@ button {
   transform: scale(1) translateY(0);
 }
 .line.open .line--toggle {
+  max-height: 1000px;
   transition: 0.2s ease-out all;
   transform: rotate(135deg);
   top: -1rem;
@@ -177,9 +182,27 @@ button {
 }
 
 
-
+/**
+ * #faq
+ **/
 #faq {}
+#faq ul {
+  list-style: none;
+}
+#faq li {
+  margin-bottom: 2rem;
+}
+#faq ul strong {
+  font-size
+}
+#faq ul p {
+  line-height: 1.1666;
+}
 
+
+/**
+ * .footer
+ **/
 .footer {
   margin: 1.5rem 5%;
   font-size: 0.875rem;
