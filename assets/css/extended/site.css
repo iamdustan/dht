@@ -143,6 +143,13 @@ button {
   html {
     font-size: 13px;
   }
+  .line {
+    margin: 0 2.5%;
+    padding: 3rem 2.5%;
+  }
+  .line--toggle {
+    right: -2.5%;
+  }
 }
 
 .line--contents {
