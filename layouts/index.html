@@ -2,8 +2,9 @@
 
 {{ define "main" }}
   <a href="https://www.eventbrite.com/e/davidson-home-village-tour-tickets-565451429447" class="button" id="tickets">Tickets →</a> 
-  <h1 id="logo">Davidson <br />Home <br />Tour</h1>
-  <section id="cta">
+  {{ $logo := (resources.GetMatch "images/dht-logo.png") }}
+  <img id="logo" src="{{ $logo.RelPermalink }}" alt="Davidson Home Tour" />
+  <section id="cta" >
     <p>
       Explore the heart of Davidson on a self-guided tour in support of
       <a href="https://www.dc-childdevelopmentcenter.org/">Davidson-Cornelius Child Development Center</a>.
@@ -18,8 +19,8 @@
     <header class="line--headersmall">Generously supported by</header>
   </section>
   <section id="tickets" class="line">
-      <h2 class="line--header">Event</h2>
-      <button class="line--toggle" aria-label="Toggle Event contents">+</button>
+    <h2 class="line--header">Event</h2>
+    <button class="line--toggle" aria-label="Toggle Event contents">+</button>
 
     <div class="line--contents">
       <div class="datetime">
@@ -89,8 +90,9 @@
       w = window.innerWidth;
       h = window.innerHeight;
       const rect = logo.getBoundingClientRect();
-      startTop = h / 2 - rect.width / 2;
-      startLeft = logo.style.width = w / 2 - rect.height / 2;
+      const scale = rect.width / logo.offsetWidth;
+      startTop = h / 2 - rect.height;
+      startLeft = logo.style.width = (w / 2) - (rect.width / scale / 2);
       logo.style.top = `${startTop}px`;
       logo.style.left = `${startLeft}px`;
 

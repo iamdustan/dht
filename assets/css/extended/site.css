@@ -28,14 +28,15 @@ a#tickets {
   top: 1.5rem;
   right: 1.5rem;
 }
-h1#logo {
+#logo {
   position: fixed;
   z-index: 10;
   animation: fadeInAnimation ease 1s;
-  padding: 1.5rem;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   background: var(--theme);
+  width: 600px;
+  max-width: 75vw;
 }
 #cta {
   font-size: 0.875rem;
