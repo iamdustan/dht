@@ -23,11 +23,10 @@
   }
 }
 
-button#tickets {
+a#tickets {
   position: fixed;
   top: 1.5rem;
   right: 1.5rem;
-  z-index: 1;
 }
 h1#logo {
   position: fixed;
@@ -72,8 +71,23 @@ button {
   border-top: 1px solid var(--theme-inverse-opaque);
   padding: 3rem 5%;
   position: relative;
+  transition: 0.333s ease-in opacity;
 }
-.line header {
+.line--toggle {
+  background: transparent;
+  border: 0;
+  position: absolute;
+  right: 1.5rem;
+  font-size: 3rem;
+  top: 1.5rem;
+  color: inherit;
+  transform: rotate(0deg);
+  transition: 0.2s ease-in transform;
+}
+.line.fade {
+  opacity: 0.4;
+}
+.line--headersmall {
   position: absolute;
   top: 0.25em;
   right: 1em;
@@ -81,6 +95,26 @@ button {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+.line--header {
+  cursor: pointer;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  font-variant: small-caps;
+}
+.line--contents {
+  max-height: 0px;
+  opacity: 0;
+  transition: .333s linear all;
+}
+.line.open .line--contents {
+  max-height: 500px;
+  opacity: 1;
+}
+.line.open .line--toggle {
+  transition: 0.2s ease-out transform;
+  transform: rotate(135deg);
 }
 
 #map {

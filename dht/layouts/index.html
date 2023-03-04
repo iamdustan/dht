@@ -1,7 +1,7 @@
 
 
 {{ define "main" }}
-  <button id="tickets">Tickets →</button> 
+  <a href="https://www.eventbrite.com/e/davidson-home-village-tour-tickets-565451429447" class="button" id="tickets">Tickets →</a> 
   <h1 id="logo">Davidson <br />Home <br />Tour</h1>
   <section id="cta">
     <p>
@@ -15,40 +15,46 @@
     <img src="{{ $image.RelPermalink }}" />
   </section>
   <section id="sponsors" class="line">
-    <header>Generously supported by</header>
+    <header class="line--headersmall">Generously supported by</header>
   </section>
   <section id="tickets" class="line">
-    <header>Tickets</header>
+    <header class="line--header">Tickets</header>
+    <button class="line--toggle" aria-label="Toggle Tickets content">+</button>
 
-    <span>April 29, 2023</span>
-    <span>10am - 4pm</span>
-    <p>The Davidson Home & Village Tour is an opportunity to explore the heart of Davidson through hand-picked homes and village sites.</p>
-    <p>Come experience a range of diverse architectural styles, inspiring interior design, historical significance, art displays, and more! Each space will be staffed by a docent and stories as if the walls could talk.</p>
+    <div class="line--contents">
+      <span>April 29, 2023</span>
+      <span>10am - 4pm</span>
+      <p>The Davidson Home & Village Tour is an opportunity to explore the heart of Davidson through hand-picked homes and village sites.</p>
+      <p>Come experience a range of diverse architectural styles, inspiring interior design, historical significance, art displays, and more! Each space will be staffed by a docent and stories as if the walls could talk.</p>
+    </div>
   </section>
 
   <section id="faq" class="line">
-    <header>FAQ</header>
-    <ul>
-      <li>
-        <strong>Where do I park?</strong>
-        <p>Free parking is available throughout the town in designated spaces. The walking tour begins at the Davidson green in front of the Library.</p>
-      <li>
-        <strong>What is included in the ticket?</strong>
-        <p>Self-guided walking tour of the homes which includes designated access inside the home as determined by the homeowner.</p>
-      </li>
-      <li>
-        <strong>Are pets allowed on the tour?</strong>
-        <p>While we love pets, they are not permitted on the tour.</p>
-      </li>
-      <li>
-        <strong>What is included in the ticket?</strong>
-        <p>Self-guided walking tour of the homes which includes designated access inside the home as determined by the homeowner.</p>
-      </li>
-      <li>
-        <strong>Can I drive the tour route?</strong>
-        <p>No, there is not parking spaces available at homes. All houses and sites are selected to be within walking distance from the check in location.</p>
-      </li>
-    </ul>
+    <header class="line--header">FAQ</header>
+    <button class="line--toggle" aria-label="Toggle FAQs content">+</button>
+    <div class="line--contents">
+      <ul>
+        <li>
+          <strong>Where do I park?</strong>
+          <p>Free parking is available throughout the town in designated spaces. The walking tour begins at the Davidson green in front of the Library.</p>
+        <li>
+          <strong>What is included in the ticket?</strong>
+          <p>Self-guided walking tour of the homes which includes designated access inside the home as determined by the homeowner.</p>
+        </li>
+        <li>
+          <strong>Are pets allowed on the tour?</strong>
+          <p>While we love pets, they are not permitted on the tour.</p>
+        </li>
+        <li>
+          <strong>What is included in the ticket?</strong>
+          <p>Self-guided walking tour of the homes which includes designated access inside the home as determined by the homeowner.</p>
+        </li>
+        <li>
+          <strong>Can I drive the tour route?</strong>
+          <p>No, there is not parking spaces available at homes. All houses and sites are selected to be within walking distance from the check in location.</p>
+        </li>
+      </ul>
+    </div>
   </section>
 
   <main aria-role="main">
@@ -98,6 +104,46 @@
     switch (event.key) {
       case '?': return toggleTheme();
     }
+  });
+})();
+
+(function lines() {
+  const lines = Array.from(document.querySelectorAll('.line'));
+  function on(type, selector, fn) {
+    // events that should default to the capture phase
+    const capture = type === 'mouseenter' || type === 'mouseleave';
+    window.addEventListener(type, e => {
+      if (e.target.matches(selector)) {
+        return fn(e);
+      }
+    }, capture);
+  }
+
+  on('click', '.line *', (e) => {
+    Array
+      .from(document.querySelectorAll('.line.open'))
+      .forEach(el => el.classList.remove('open'));
+
+    const targetLine = e.target.closest('.line');
+    targetLine.classList.add('open');
+  });
+
+  on('click', '.line.open .line--toggle', (e) => {
+    const targetLine = e.target.closest('.line');
+    console.log('yah?', targetLine)
+    targetLine.classList.remove('open');
+  });
+  on('mouseenter', '.line', e => {
+    lines.forEach(line => {
+      if (line !== e.target) {
+        line.classList.add('fade');
+      }
+    });
+  });
+  on('mouseleave', '.line', e => {
+    lines.forEach(line => {
+      line.classList.remove('fade');
+    });
   });
 })();
 </script>
