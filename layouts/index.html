@@ -134,27 +134,28 @@
     }, capture);
   }
 
-  on('click', '.line *', (e) => {
+  on('pointerup', '.line *', toggleSection);
+  function toggleSection(e) {
+    const targetLine = e.target.closest('.line');
+    targetLine.classList.toggle('open');
+
     Array
       .from(document.querySelectorAll('.line.open'))
-      .forEach(el => el.classList.remove('open'));
+      .forEach(el => {
+        if(el !== targetLine) {
+          el.classList.remove('open')
+        }
+      });
+  }
 
-    const targetLine = e.target.closest('.line');
-    targetLine.classList.add('open');
-  });
-
-  on('click', '.line.open .line--toggle', (e) => {
-    const targetLine = e.target.closest('.line');
-    targetLine.classList.remove('open');
-  });
-  on('mouseenter', '.line', e => {
+  on('pointerenter', '.line', e => {
     lines.forEach(line => {
       if (line !== e.target) {
         line.classList.add('fade');
       }
     });
   });
-  on('mouseleave', '.line', e => {
+  on('pointerleave', '.line', e => {
     lines.forEach(line => {
       line.classList.remove('fade');
     });
