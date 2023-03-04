@@ -190,6 +190,15 @@ button {
   margin-right: 2px;
   margin-left: -10px;
 }
+@media screen and (max-width: 800px) {
+  #tickets .line--contents {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .datetime {
+    width: unset;
+  }
+}
 
 
 /**
