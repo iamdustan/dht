@@ -162,6 +162,11 @@ button {
   font-family: Montserrat;
 }
 
+#map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 #map {}
 
 /**
