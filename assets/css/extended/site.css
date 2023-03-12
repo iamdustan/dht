@@ -28,8 +28,13 @@ a#tickets {
   top: 1.5rem;
   right: 1.5rem;
 }
+#logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
 #logo {
-  position: fixed;
   z-index: 10;
   animation: fadeInAnimation ease 1s;
   animation-iteration-count: 1;
@@ -44,7 +49,7 @@ a#tickets {
   flex-direction: row;
   gap: 1rem;
   max-width: 45em;
-  margin: 80vh auto 0;
+  margin: 0 auto;
   padding: 1.5rem;
   background: rgba(255, 255, 255, 0.05);
   align-items: center;

@@ -3,7 +3,9 @@
 {{ define "main" }}
   <a href="https://www.eventbrite.com/e/davidson-home-village-tour-tickets-565451429447" class="button" id="tickets">Tickets →</a> 
   {{ $logo := (resources.GetMatch "images/dht-logo.png") }}
-  <img id="logo" src="{{ $logo.RelPermalink }}" alt="Davidson Home Tour" />
+  <div id="logo-container">
+    <img id="logo" src="{{ $logo.RelPermalink }}" alt="Davidson Home Tour" />
+  </div>
   <section id="cta" >
     <p>
       Explore the heart of Davidson on a self-guided tour in support of
@@ -52,6 +54,11 @@
         <li>
           <strong>Where do I park?</strong>
           <p>Free parking is available throughout the town in designated spaces. The walking tour begins at the Davidson green in front of the Library.</p>
+        </li>
+        <li>
+          <strong>Where do I check-in?</strong>
+          <p>Your first stop is at the Davidson Town Green (119 South Main Street Davidson) where you will check in at the DCCDC tent. There you will receive your tickets required for entry at each home. You will also receive a map and booklet about each of the homes.</p>
+        </li>
         <li>
           <strong>What is included in the ticket?</strong>
           <p>Self-guided walking tour of the homes which includes designated access inside the home as determined by the homeowner.</p>
@@ -63,6 +70,10 @@
         <li>
           <strong>Can I drive the tour route?</strong>
           <p>No, there is not parking spaces available at homes. All houses and sites are selected to be within walking distance from the check in location.</p>
+        </li>
+        <li>
+          <strong>What is the tour like for children?</strong>
+          <p>No strollers will be allowed in the homes, but strollers can be used to walk between homes. Children should be supervised at all times.</p>
         </li>
       </ul>
     </div>
@@ -76,6 +87,7 @@
 <script>
 
 (function logoScroller() {
+  return;
   let w;
   let h;
   let startTop;

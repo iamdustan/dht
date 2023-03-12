@@ -8,9 +8,9 @@
 <body>
     {{- partialCached "header.html" . .Page -}}
     <main class="main">
-        {{- block "main" . }}{{ end }}
+        {{ .Content }}
     </main>
-    {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
+    {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter")  -}}
 </body>
 
 </html>
