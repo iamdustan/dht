@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <a href="https://www.eventbrite.com/e/davidson-home-village-tour-tickets-565451429447" class="button" id="tickets">Tickets →</a> 
+  <a href="https://www.eventbrite.com/e/davidson-home-village-tour-tickets-565451429447" class="button" id="tickets">Purchase Tickets →</a> 
   {{ $logo := (resources.GetMatch "images/dht-logo.png") }}
   <div id="logo-container">
     <img id="logo" src="{{ $logo.RelPermalink }}" alt="Davidson Home Tour" />
@@ -18,7 +18,7 @@
   <section id="sponsors" class="line">
     <header class="line--headersmall">Generously supported by</header>
   </section>
-  <section id="tickets" class="line">
+  <section id="tickets" class="line open">
     <h2 class="line--header">Event</h2>
     <button class="line--toggle" aria-label="Toggle Event contents">+</button>
 
@@ -31,22 +31,26 @@
       <div class="info">
         <p>The Davidson Home & Village Tour is an opportunity to explore the heart of Davidson through hand-picked homes and village sites.</p>
         <p>Come experience a range of diverse architectural styles, inspiring interior design, historical significance, art displays, and more! Each space will be staffed by a docent and stories as if the walls could talk.</p>
+
+        <div class="prices">
+          <header>Ticket Prices</header>
+          <ul>
+            <li>
+              <strong>General Adult Admission</strong>
+              <em>Special pre-purchase price: $40</em>
+              <em>Standard price: $50</em>
+            </li>
+            <li>
+              <strong>General Kids Admission (ages 2-12)</strong>
+              <em>Special pre-purchase price: $15</em>
+              <em>Standard price: $25</em>
+            </li>
+          </ul>
+          <div>
+            <a href="https://www.eventbrite.com/e/davidson-home-village-tour-tickets-565451429447" class="button">Purchase Tickets →</a> 
+          </div>
+        </div>
       </div>
-    </div>
-    <div>
-      <header>Ticket Prices</header>
-      <ul>
-        <li>
-          General Adult Admission.
-          Special pre-purchase price: $40 
-          Standard price: $50
-        </li>
-        <li>
-          General Kids Admission (ages 2-12)
-          Special pre-purchase price: $15
-          Standard price: $25
-        </li>
-      </ul>
     </div>
   </section>
 
@@ -99,41 +103,6 @@
     </div>
   </main>
 <script>
-
-(function logoScroller() {
-  return;
-  let w;
-  let h;
-  let startTop;
-  let startLeft;
-  const logo = document.getElementById('logo');
-  function calculatePosition() {
-    requestAnimationFrame(() => {
-      w = window.innerWidth;
-      h = window.innerHeight;
-      const rect = logo.getBoundingClientRect();
-      const scale = rect.width / logo.offsetWidth;
-      startTop = h / 2 - rect.height;
-      startLeft = logo.style.width = (w / 2) - (rect.width / scale / 2);
-      logo.style.top = `${startTop}px`;
-      logo.style.left = `${startLeft}px`;
-
-      redraw();
-    });
-  }
-  document.addEventListener('DOMContentLoaded', calculatePosition);
-  window.addEventListener('resize', calculatePosition);
-  document.addEventListener('scroll', redraw);
-
-  function redraw() {
-    const targetYPosition = startTop - window.scrollY;
-    logo.style.top = `${Math.max(targetYPosition, 0)}px`;
-    if (targetYPosition < 0) {
-      const targetXPosition = startTop + startLeft - window.scrollY;
-      logo.style.left = `${Math.max(targetXPosition, 0)}px`;
-    }
-  }
-})();
 
 (function lines() {
   const lines = Array.from(document.querySelectorAll('.line'));

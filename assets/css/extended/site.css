@@ -169,12 +169,6 @@ button {
  **/
   #tickets {}
 
-  @media screen and (min-width: 800px) {
-    #tickets .row {
-      display: flex;
-      align-items: center;
-    }
-  }
   .line--contents {
   }
   .datetime {
@@ -205,6 +199,33 @@ button {
     padding-left: 5px;
     margin-right: 2px;
     margin-left: -10px;
+  }
+
+  .prices {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+  }
+  .prices header {
+    font-size: 1.5rem;
+  }
+  .prices strong {
+    display: block;
+  }
+  .prices em {
+    display: block;
+  }
+  .prices ul {
+    list-style: none;
+  }
+
+  @media screen and (min-width: 800px) {
+    #tickets .row {
+      display: flex;
+      align-items: center;
+    }
   }
   @media screen and (max-width: 800px) {
     #tickets .line--contents {
