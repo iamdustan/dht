@@ -150,7 +150,17 @@
   on('pointerup', '.line *', toggleSection);
   function toggleSection(e) {
     const targetLine = e.target.closest('.line');
-    targetLine.classList.toggle('open');
+    // only toggle if the second tap is on the line header
+    if (targetLine.classList.contains('open')) {
+      if (
+        e.target.matches('.line--header') ||
+        e.target.matches('.line--toggle')
+      ) {
+        targetLine.classList.toggle('open');
+      }
+    } else {
+      targetLine.classList.toggle('open');
+    }
 
     Array
       .from(document.querySelectorAll('.line.open'))
