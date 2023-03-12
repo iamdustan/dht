@@ -273,8 +273,8 @@ button {
   }
   .theme-toggle {
     -size: 2rem;
-    --icon-fill: hsl(210 10% 30%);
-    --icon-fill-hover: hsl(210 10% 15%);
+    --icon-fill: hsl(50.6 100% 50%); /*hsl(210 10% 30%);*/
+    --icon-fill-hover: hsl(45 100% 50%); /*hsl(210 10% 15%);*/
     background: none;
     border: none;
     padding: 0;
