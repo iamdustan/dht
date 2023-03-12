@@ -168,9 +168,12 @@ button {
  * #tickets
  **/
 #tickets {}
-#tickets .line--contents {
-  display: flex;
-  align-items: center;
+
+@media screen and (min-width: 800px) {
+  #tickets .row {
+    display: flex;
+    align-items: center;
+  }
 }
 .line--contents {
 }
