@@ -27,6 +27,7 @@ a#tickets {
   position: fixed;
   top: 1.5rem;
   right: 1.5rem;
+  z-index: 12;
 }
 #logo-container {
   display: flex;
@@ -166,6 +167,9 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#map img {
+  max-width: 80%;
 }
 #map {}
 
