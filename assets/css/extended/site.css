@@ -23,11 +23,18 @@
   }
 }
 
-a#tickets {
+#nav {
   position: fixed;
   top: 1.5rem;
   right: 1.5rem;
   z-index: 12;
+  display: flex;
+  flex-direction: row;
+  gap: 0.666rem;
+  align-items: center;
+}
+#nav img {
+  height: 28px;
 }
 #logo-container {
   display: flex;
@@ -60,7 +67,7 @@ a#tickets {
   animation-fill-mode: forwards;
 }
 #cta a {
-  width: 12em;
+  width: 15em;
 }
 
 .button,

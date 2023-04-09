@@ -1,5 +1,13 @@
 {{ define "main" }}
-  <a href="https://www.eventbrite.com/e/davidson-home-village-tour-tickets-565451429447" class="button" id="tickets">Purchase Tickets →</a> 
+  <nav id="nav">
+    <a href="https://www.facebook.com/davidsonhometour">
+      <img src="{{ (resources.GetMatch "images/logos/facebook.png").RelPermalink }}" />
+    </a>
+    <a href="https://www.instagram.com/davidsonhometour">
+      <img src="{{ (resources.GetMatch "images/logos/instagram.png").RelPermalink }}" />
+    </a>
+    <a href="https://www.eventbrite.com/e/davidson-home-village-tour-tickets-565451429447" class="button" id="tickets">Purchase Tickets →</a> 
+  </nav>
   {{ $logo := (resources.GetMatch "images/dht-logo.png") }}
   <div id="logo-container">
     <img id="logo" src="{{ $logo.RelPermalink }}" alt="Davidson Home Tour" />
@@ -155,7 +163,7 @@
       <div class="base-sponsors">
         <header>Good Neighbors</header>
         <ul>
-          <li>Davidson Wine Co</li>
+          <li>{{partial "anchor.html" (dict "context" . "href" "https://www.facebook.com/davidsonwineco" "text" "Davidson Wine Co") }}</li>
           <li>{{partial "anchor.html" (dict "context" . "href" "https://carrburritos.com/davidson/" "text" "Carrburritos") }}</li>
           <li>{{partial "anchor.html" (dict "context" . "href" "https://oysterdvp.com/" "text" "Oyster Development, LLC") }}</li>
           <li>{{partial "anchor.html" (dict "context" . "href" "https://www.greencouchnc.com/" "text" "Green Couch Counseling") }}</li>
