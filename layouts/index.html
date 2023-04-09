@@ -18,7 +18,7 @@
   </section>
   <section id="sponsors" class="line open">
     <header class="line--headersmall">Generously supported by</header>
-    <div id="main-sponsors">
+    <div class="top-sponsors">
       <a href="https://www.danielleknoxinteriors.com">
         {{ $image := (resources.GetMatch "images/logos/dki.png") }}
         <img src="{{ $image.RelPermalink }}" alt="Danielle Knox Interiors">
@@ -115,6 +115,54 @@
           <p>No strollers will be allowed in the homes, but strollers can be used to walk between homes. Children should be supervised at all times.</p>
         </li>
       </ul>
+    </div>
+  </section>
+
+  <section id="more-sponsors" class="line open">
+    <header class="line--header">Thank you, Sponsors</header>
+    <button class="line--toggle" aria-label="Toggle additional sponsors">+</button>
+    <div class="line--contents">
+      <header>Star Citizens</header>
+      <div class="top-sponsors">
+        <a href="https://www.danielleknoxinteriors.com">
+          {{ $image := (resources.GetMatch "images/logos/dki.png") }}
+          <img src="{{ $image.RelPermalink }}" alt="Danielle Knox Interiors">
+        </a>
+        <a href="https://thecoveatdavidsonbay.com/">
+          {{ $image := (resources.GetMatch "images/logos/thecove.jpg") }}
+          <img src="{{ $image.RelPermalink }}" alt="The Cove at Davidson Bay">
+        </a>
+        <a href="https://jewelboxonline.com">
+          {{ $image := (resources.GetMatch "images/logos/jewelbox.png") }}
+          <img src="{{ $image.RelPermalink }}" alt="Jewelbox">
+        </a>
+        <a href="http://www.dellingerlawfirm.com/">
+          {{ $image := (resources.GetMatch "images/logos/dellingerlaw.png") }}
+          <img src="{{ $image.RelPermalink }}" alt="Dellinger Law PLLC">
+        </a>
+      </div>
+
+    <div class="maybe-row">
+      <div class="mid-sponsors">
+        <header>Community Helpers</header>
+        <ul>
+          <li>{{partial "anchor.html" (dict "context" . "href" "https://www.davidsonflowerco.com/" "text" "Davidson Flower Company") }}</li>
+          <li>{{partial "anchor.html" (dict "context" . "href" "https://www.mainstreetbooksdavidson.com/" "text" "Main Street Books") }}</li>
+          <li>{{partial "anchor.html" (dict "context" . "href" "https://www.mooresvillechiropractor.com/" "text" "ChiroLife Wellness Center") }}</li>
+        </ul>
+      </div>
+
+      <div class="base-sponsors">
+        <header>Good Neighbors</header>
+        <ul>
+          <li>Davidson Wine Co</li>
+          <li>{{partial "anchor.html" (dict "context" . "href" "https://carrburritos.com/davidson/" "text" "Carrburritos") }}</li>
+          <li>{{partial "anchor.html" (dict "context" . "href" "https://oysterdvp.com/" "text" "Oyster Development, LLC") }}</li>
+          <li>{{partial "anchor.html" (dict "context" . "href" "https://www.greencouchnc.com/" "text" "Green Couch Counseling") }}</li>
+          <li>That guy who built this site</li>
+        </ul>
+      </div>
+    </div>
     </div>
   </section>
 
