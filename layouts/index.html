@@ -14,44 +14,62 @@
   <section id="map2">
     {{ $image := (resources.GetMatch "images/map4.png") }}
     <img src="{{ $image.RelPermalink }}" />
-  <p>All of our fabulous homes are within walking distance of the Town Green: Three on Lorimer, two on N. Main, one on Greenway, and two near McEver Field. Happy walking!</p>
+    <p>All of our fabulous homes are within walking distance of the Town Green: Three on Lorimer, two on N. Main, one on Greenway, and two near McEver Field. Happy walking!</p>
   </section>
-  <section id="sponsors" class="line">
+  <section id="sponsors" class="line open">
     <header class="line--headersmall">Generously supported by</header>
+    <div id="main-sponsors">
+      <a href="https://www.danielleknoxinteriors.com">
+        {{ $image := (resources.GetMatch "images/logos/dki.png") }}
+        <img src="{{ $image.RelPermalink }}" alt="Danielle Knox Interiors">
+      </a>
+      <a href="https://thecoveatdavidsonbay.com/">
+        {{ $image := (resources.GetMatch "images/logos/thecove.jpg") }}
+        <img src="{{ $image.RelPermalink }}" alt="The Cove at Davidson Bay">
+      </a>
+      <a href="https://jewelboxonline.com">
+        {{ $image := (resources.GetMatch "images/logos/jewelbox.png") }}
+        <img src="{{ $image.RelPermalink }}" alt="Jewelbox">
+      </a>
+      <a href="http://www.dellingerlawfirm.com/">
+        {{ $image := (resources.GetMatch "images/logos/dellingerlaw.png") }}
+        <img src="{{ $image.RelPermalink }}" alt="Dellinger Law PLLC">
+      </a>
+    </div>
   </section>
   <section id="tickets" class="line">
     <h2 class="line--header">Event</h2>
     <button class="line--toggle" aria-label="Toggle Event contents">+</button>
-
     <div class="line--contents">
-    <div class="row">
-      <div class="datetime">
-        <span class="date">April 29, 2023</span>
-        <span class="time">10am - 4pm</span>
-        <div class="prices">
-          <header>Ticket Prices</header>
-          <ul>
-            <li>
-              <strong>General Adult Admission</strong>
-              <em>Advanced Purchase: $40</em>
-              <em>Day of Ticket: $50</em>
-            </li>
-            <li>
-              <strong>General Kids Admission (ages 2-12)</strong>
-              <em>Advanced Purchase: $15</em>
-              <em>Day of Ticket: $25</em>
-            </li>
-          </ul>
-          <div>
-            <a href="https://www.eventbrite.com/e/davidson-home-village-tour-tickets-565451429447" class="button">Purchase Tickets →</a> 
+      <div class="row">
+        <div class="datetime">
+          <span class="date">April 29, 2023</span>
+          <span class="time">10am - 4pm</span>
+          <div class="prices">
+            <header>Ticket Prices</header>
+            <ul>
+              <li>
+                <strong>General Adult Admission</strong>
+                <em>Advanced Purchase: $40</em>
+                <em>Day of Ticket: $50</em>
+              </li>
+              <li>
+                <strong>General Kids Admission (ages 2-12)</strong>
+                <em>Advanced Purchase: $15</em>
+                <em>Day of Ticket: $25</em>
+              </li>
+            </ul>
+            <div>
+              <a href="https://www.eventbrite.com/e/davidson-home-village-tour-tickets-565451429447" class="button">Purchase Tickets →</a> 
+            </div>
           </div>
         </div>
-      </div>
-      <div class="info">
-        <p>The Davidson Home & Village Tour is a fundraiser for the Davidson Cornelius Child Development Center (DCCDC). The Tour is an opportunity to explore the heart of Davidson through hand-picked homes and beloved village sites. Step inside curated homes to experience a range of diverse architectural styles, inspiring interior design, historical significance, local art displays, and more! Each space will be staffed by a local docent. Come enjoy a self-guided tour and get the inside scoop!</p>
+        <div class="info">
+          <p>The Davidson Home & Village Tour is a fundraiser for the Davidson Cornelius Child Development Center (DCCDC). The Tour is an opportunity to explore the heart of Davidson through hand-picked homes and beloved village sites. Step inside curated homes to experience a range of diverse architectural styles, inspiring interior design, historical significance, local art displays, and more! Each space will be staffed by a local docent. Come enjoy a self-guided tour and get the inside scoop!</p>
 
- 
-        <p>DCCDC provides high-quality early childhood education with scholarship support for children 6 weeks-Pre-K. Nearly 50% of our mini-scholars receive sliding-scale financial assistance ranging from 35-75% of tuition. Proceeds from the Davidson Home & Village Tour fuel tuition scholarships, teacher and staff support, operational costs, and improvements to DCCDC.</p>
+  
+          <p>DCCDC provides high-quality early childhood education with scholarship support for children 6 weeks-Pre-K. Nearly 50% of our mini-scholars receive sliding-scale financial assistance ranging from 35-75% of tuition. Proceeds from the Davidson Home & Village Tour fuel tuition scholarships, teacher and staff support, operational costs, and improvements to DCCDC.</p>
+        </div>
       </div>
     </div>
   </section>
