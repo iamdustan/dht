@@ -2,10 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on Davidson Home Tour</title>
-    <link>http://davidsonhometour.org/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content in Home on Davidson Home Tour</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Feb 2023 15:09:00 -0500</lastBuildDate><atom:link href="http://davidsonhometour.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Feb 2023 15:09:00 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sponsors</title>
+      <link>http://localhost:1313/sponsorship/</link>
+      <pubDate>Sun, 26 Feb 2023 15:09:00 -0500</pubDate>
+      <guid>http://localhost:1313/sponsorship/</guid>
+      <description>&lt;h2 id=&#34;support-dccdc&#34;&gt;Support DCCDC&lt;/h2&gt;&#xA;&lt;p&gt;Your sponsorship will directly affect the lives of families in your community.&lt;/p&gt;&#xA;&lt;p&gt;DCCDC is the only non-profit, sliding-scale rate childcare center in our area. Parents&#xA;are able to work because their children have a safe, secure, nurturing and affordable&#xA;place to be during the day.&lt;/p&gt;&#xA;&lt;p&gt;Children who attend a pre-K program, like DCCDC, are:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Less likely to use drugs&lt;/li&gt;&#xA;&lt;li&gt;More likely to graduate from high school&lt;/li&gt;&#xA;&lt;li&gt;More likely to attend college&lt;/li&gt;&#xA;&lt;li&gt;More likely to be employed at age 30&lt;/li&gt;&#xA;&lt;li&gt;Less likely to experience health problems like hypertension&lt;/li&gt;&#xA;&lt;li&gt;Higher income earners in the future.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Yes, investing in a 3 year-old will change the course of that child’s life.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
