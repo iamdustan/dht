@@ -58,35 +58,21 @@ This is a unique opportunity to give local and get local!
 
 ## Sponsorship Opportunities
 
-### Hometown Hero **$7500**
+### Village Visionary and Presenting Sponsor **$7000+**
 
-Presenting sponsorship level, includes:
-* Logo and name listed as “presenting sponsor” on all tour materials
-* 8 tickets to the tour
-* Full page in tour brochure
-* Featured on
-* Yard signs at each home stop
-* Tour website (with link)
-* Tour invitations
-* All tour communications
-* Mentioned in media whenever possible
-* Art on the Green booth banner
-* Anywhere with the home tour logo will also include your name/business
-* Included on the “Thank you to our sponsors” page of the brochure
+Includes everything from all packages below plus...
+* Premier Event Sponsor featured in the 2025 Home Tour Logo with prime placement on promotional items
+* Full page brochure advertising
+* Featured at Art on the Green registration booth as Presenting Sponsor
+* Featured exclusively on individual yard signs at every home
+* Additional raffle tickets (12 total); Additional tour tickets (12 total)
 
-### Village Advocate **$5000**
+### Village Advocate and Home Sponsor **$4000+**
 
-Sponsor one of the homes on our home tour, this includes:
-* 8 tickets to the tour
-* Full page in tour brochure
-* Featured on
-* Yard sign at one home stop
-* Signage within the home
-* Tour website (with link)
-* Tour invitations
-* Art on the Green booth banner
-* All Tour communications
-* Included on the “Thank you to our sponsors” page of the brochure
+Includes everything from all packages below plus...
+* Featured advertising and promotional materials featured in one home on the 2025 Home Tour
+* Featured as "Village Advocate" on yard signs at the sponsored home
+* Additional raffle tickets (8 total); Additional tour
 
 ### Kindred Spirit **$2500**
 
@@ -99,33 +85,23 @@ Sponsor one of the homes on our home tour, this includes:
 * Art on the Green booth banner
 * Included on the “Thank you to our sponsors” page of the brochure
 
-### Star Citizen **$1000**
-* 4 tickets to the tour
-* 1/2 page callout in brochure
-* Featured on
-* Tour website (with link)
-* Tour invitations
-* Tour email outreach
-* Art on the Green booth banner
-* Included on the “Thank you to our sponsors” page of the brochure
+### Village Education Ally **$1500+**
 
-### Community Helper **$500**
-* 4 tickets
-* 1/4 page callout in brochure
-* Featured on
-* Tour website (with link)
-* Tour invitations
-* Included on the “Thank you to our sponsors” page of the brochure
+Includes everything from all packages below plus...
+* Upgrade to half page brochure advertisement
+* $1500+ Additional raffle tickets (4 total); Additional tour tickets (4 total)
 
-### Good Neighbor **$250**
+### Community Helper **$500+**
 
-* 2 tickets
-* 1/4 page callout in brochure
-* Featured on
-* Tour website (with link)
-* Tour invitations
-* Included on the “Thank you to our sponsors” page of the brochure
+Includes everything from all packages below plus...
 
-### The Locals **$100**
-* Included on the “Thank you to our local supporters” page of the brochure
+* Quarter page brochure advertisement
+* 2 raffle tickets and 2 tour tickets
 
+### Caring Neighbor **$250+**
+
+* Recognition on the "Thank you to our Sponsors" brochure page
+* Logo displayed on the DCCDC Home Tour Website with link to business
+* Inclusion: tour invitations, email, and Art on the Green booth banner
+* Recognition in the 2024 DCCDC Community Impact Report
+* 2 tour tickets
