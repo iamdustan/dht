@@ -194,35 +194,56 @@ button {
  * #sponsors
  **/
 #sponsors {}
-
-.top-sponsors {
+.visionary-sponsors {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.visionary-sponsors img {
+  max-width: 100%;
+}
+
+.ally-sponsors,
+.advocate-sponsors {
+  display: flex;
   flex-wrap: wrap;
   gap: 3rem;
   align-items: center;
+}
+
+.ally-sponsors {
+  flex-direction: column;
   justify-content: space-between;
 }
 
-.top-sponsors img {
+.ally-sponsors img,
+.advocate-sponsors img {
   max-width:100%;
   max-height: 120px;
 }
 
+.advocate-sponsors {
+  flex-direction: row;
+}
 @media screen and (min-width: 801px) {
-  .top-sponsors {
+  .ally-sponsors {
     flex-direction: row;
   }
 
-  .top-sponsors a {
+  .ally-sponsors a {
     max-width: calc(50% - 3rem);
     max-height: 220px;
+    display: flex;
+    justify-content: center;
   }
 }
-@media screen and (min-width: 1200px) {
-  .top-sponsors a {
-    max-width: calc(25% - 3rem);
-  }
+
+.advocate-sponsors a {
+    max-width: calc(50% - 3rem);
+    max-height: 220px;
+    display: flex;
+    justify-content: center;
 }
 
 
