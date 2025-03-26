@@ -126,46 +126,74 @@
     <header class="line--header">Thank you Sponsors</header>
     <button class="line--toggle" aria-label="Toggle additional sponsors">+</button>
     <div class="line--contents">
-      <header>Star Citizens</header>
+      <header>
+        Village Visionary and Presenting Sponsor 
+      </header>
       <div class="top-sponsors">
-        <a href="https://www.danielleknoxinteriors.com">
-          {{ $image := (resources.GetMatch "images/logos/dki.png") }}
-          <img src="{{ $image.RelPermalink }}" alt="Danielle Knox Interiors">
+        <a href="https://www.facebook.com/plattnerproperties">
+          {{ $image := (resources.GetMatch "images/logos/plattnerproperties.png") }}
+          <img src="{{ $image.RelPermalink }}" alt="PLattner Properties">
         </a>
-        <a href="https://thecoveatdavidsonbay.com/">
-          {{ $image := (resources.GetMatch "images/logos/thecove.jpg") }}
-          <img src="{{ $image.RelPermalink }}" alt="The Cove at Davidson Bay">
+      </div>
+
+      <header>
+        Village Education Ally
+      </header>
+      <div class="top-sponsors">
+        <a href="https://davidsonarchitect.com/">
+          {{ $image := (resources.GetMatch "images/logos/davidsonarchitect.png") }}
+          <img src="{{ $image.RelPermalink }}" alt="Nicole Perri Architecture">
         </a>
         <a href="http://www.dellingerlawfirm.com/">
           {{ $image := (resources.GetMatch "images/logos/dellingerlaw.png") }}
           <img src="{{ $image.RelPermalink }}" alt="Dellinger Law PLLC">
         </a>
+        <a href="http://www.davidsonflowerco.com/">
+          {{ $image := (resources.GetMatch "images/logos/davidsonflowerco.jpg") }}
+          <img src="{{ $image.RelPermalink }}" alt="Davidson Flower Company">
+        </a>
+        <a href="http://www.oxygengroupnc.com/">
+          {{ $image := (resources.GetMatch "images/logos/oxygengroup.png") }}
+          <img src="{{ $image.RelPermalink }}" alt="Oxygen Group">
+        </a>
       </div>
+      <header>
+        Village Advocate
+      </header>
+      <div>
+        <a href="http://www.summitcoffee.com/basecamp">
+          {{ $image := (resources.GetMatch "images/logos/summitcoffee.png") }}
+          <img src="{{ $image.RelPermalink }}" alt="Summit Coffee">
+        </a>
+        <a href="http://www.weareissi.com/">
+          {{ $image := (resources.GetMatch "images/logos/weareissi.png") }}
+          <img src="{{ $image.RelPermalink }}" alt="Industrial Supply Soolutions, Inc.">
+        </a>
+      </div>
+      <div class="maybe-row">
+        <div class="mid-sponsors">
+          <header>Community Helpers</header>
+          <ul>
+            <li>{{partial "anchor.html" (dict "context" . "href" "https://www.davidsonflowerco.com/" "text" "Davidson Flower Company") }}</li>
+            <li>{{partial "anchor.html" (dict "context" . "href" "https://www.mainstreetbooksdavidson.com/" "text" "Main Street Books") }}</li>
+            <li>{{partial "anchor.html" (dict "context" . "href" "https://www.mooresvillechiropractor.com/" "text" "ChiroLife Wellness Center") }}</li>
+          </ul>
+        </div>
 
-    <div class="maybe-row">
-      <div class="mid-sponsors">
-        <header>Community Helpers</header>
-        <ul>
-          <li>{{partial "anchor.html" (dict "context" . "href" "https://www.davidsonflowerco.com/" "text" "Davidson Flower Company") }}</li>
-          <li>{{partial "anchor.html" (dict "context" . "href" "https://www.mainstreetbooksdavidson.com/" "text" "Main Street Books") }}</li>
-          <li>{{partial "anchor.html" (dict "context" . "href" "https://www.mooresvillechiropractor.com/" "text" "ChiroLife Wellness Center") }}</li>
-        </ul>
+        <div class="base-sponsors">
+          <header>Caring Neighbors</header>
+          <ul>
+            <li>{{partial "anchor.html" (dict "context" . "href" "https://lknortho.com/" "text" "Lake Norman Orthodontics") }}</li>
+            <li>{{partial "anchor.html" (dict "context" . "href" "https://whitscustard.com/locations/davidson" "text" "Whit’s (Annsley Ehret)") }}</li>
+            <li>{{partial "anchor.html" (dict "context" . "href" "https://www.kingcanarybrewing.com/" "text" "King Canary Brewing (Andrew)") }}</li>
+            <li>{{partial "anchor.html" (dict "context" . "href" "https://www.sidebarbottlecompany.com/" "text" "Side Bar") }}</li>
+            <li>{{partial "anchor.html" (dict "context" . "href" "https://www.flatirononmain.com/" "text" "Flatiron") }}</li>
+            <li>{{partial "anchor.html" (dict "context" . "href" "https://www.mandolinospizza.com/" "text" "Mandolino’s") }}</li>
+            <li>{{partial "anchor.html" (dict "context" . "href" "https://benjerry.com/davidson" "text" "Ben and Jerrys") }}</li>
+            <li>{{partial "anchor.html" (dict "context" . "href" "https://open.spotify.com/artist/3qGlhIAtRKYPxXRT2dJDDI?si=DRmmwld6RZ6Tyj0lI-2dxg" "text" "Dustan Kasten Music (the man behind the curtain)") }}</li>
+          </ul>
+        </div>
       </div>
-
-      <div class="base-sponsors">
-        <header>Caring Neighbors</header>
-        <ul>
-          <li>{{partial "anchor.html" (dict "context" . "href" "https://lknortho.com/" "text" "Lake Norman Orthodontics") }}</li>
-          <li>{{partial "anchor.html" (dict "context" . "href" "https://whitscustard.com/locations/davidson" "text" "Whit’s (Annsley Ehret)") }}</li>
-          <li>{{partial "anchor.html" (dict "context" . "href" "https://www.kingcanarybrewing.com/" "text" "King Canary Brewing (Andrew)") }}</li>
-          <li>{{partial "anchor.html" (dict "context" . "href" "https://www.sidebarbottlecompany.com/" "text" "Side Bar") }}</li>
-          <li>{{partial "anchor.html" (dict "context" . "href" "https://www.flatirononmain.com/" "text" "Flatiron") }}</li>
-          <li>{{partial "anchor.html" (dict "context" . "href" "https://www.mandolinospizza.com/" "text" "Mandolino’s") }}</li>
-          <li>{{partial "anchor.html" (dict "context" . "href" "https://benjerry.com/davidson" "text" "Ben and Jerrys") }}</li>
-          <li>{{partial "anchor.html" (dict "context" . "href" "https://open.spotify.com/artist/3qGlhIAtRKYPxXRT2dJDDI?si=DRmmwld6RZ6Tyj0lI-2dxg" "text" "Dustan Kasten Music (the man behind the curtain)") }}</li>
-        </ul>
-      </div>
-    </div>
     </div>
   </section>
 
