@@ -237,6 +237,10 @@ button {
     display: flex;
     justify-content: center;
   }
+
+  .advocate-sponsors a {
+    width: calc(50% - 3rem);
+  }
 }
 
 .advocate-sponsors a {

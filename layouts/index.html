@@ -135,6 +135,19 @@
           <img src="{{ $image.RelPermalink }}" alt="Plattner Properties">
         </a>
       </div>
+      <header>
+        Village Advocate
+      </header>
+      <div class="advocate-sponsors">
+        <a href="http://www.summitcoffee.com/basecamp">
+          {{ $image := (resources.GetMatch "images/logos/summitcoffee.png") }}
+          <img src="{{ $image.RelPermalink }}" alt="Summit Coffee">
+        </a>
+        <a href="http://www.weareissi.com/">
+          {{ $image := (resources.GetMatch "images/logos/weareissi.png") }}
+          <img src="{{ $image.RelPermalink }}" alt="Industrial Supply Soolutions, Inc.">
+        </a>
+      </div>
 
       <header>
         Village Education Ally
@@ -159,19 +172,6 @@
         <a href="https://locations.postnet.com/nc/davidson/428-b-south-main-st.">
           {{ $image := (resources.GetMatch "images/logos/postnet.svg") }}
           <img src="{{ $image.RelPermalink }}" alt="Davidson PostNet">
-        </a>
-      </div>
-      <header>
-        Village Advocate
-      </header>
-      <div class="advocate-sponsors">
-        <a href="http://www.summitcoffee.com/basecamp">
-          {{ $image := (resources.GetMatch "images/logos/summitcoffee.png") }}
-          <img src="{{ $image.RelPermalink }}" alt="Summit Coffee">
-        </a>
-        <a href="http://www.weareissi.com/">
-          {{ $image := (resources.GetMatch "images/logos/weareissi.png") }}
-          <img src="{{ $image.RelPermalink }}" alt="Industrial Supply Soolutions, Inc.">
         </a>
       </div>
       <div class="maybe-row">
