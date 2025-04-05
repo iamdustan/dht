@@ -156,6 +156,10 @@
           {{ $image := (resources.GetMatch "images/logos/oxygengroup.png") }}
           <img src="{{ $image.RelPermalink }}" alt="Oxygen Group">
         </a>
+        <a href="https://locations.postnet.com/nc/davidson/428-b-south-main-st.">
+          {{ $image := (resources.GetMatch "images/logos/postnet.svg") }}
+          <img src="{{ $image.RelPermalink }}" alt="Davidson PostNet">
+        </a>
       </div>
       <header>
         Village Advocate
@@ -174,13 +178,11 @@
         <div class="mid-sponsors">
           <header>Community Helpers</header>
           <ul>
-            <li>{{partial "anchor.html" (dict "context" . "href" "https://www.davidsonflowerco.com/" "text" "McMillan Design Build") }}</li>
-            <li>{{partial "anchor.html" (dict "context" . "href" "https://www.mainstreetbooksdavidson.com/" "text" "Advanced Wealth Strategies") }}</li>
+            <li>{{partial "anchor.html" (dict "context" . "href" "https://www.mcmillanbuilders.com/" "text" "McMillan Design Build") }}</li>
+            <li>{{partial "anchor.html" (dict "context" . "href" "https://www.planwithaws.com/" "text" "Advanced Wealth Strategies") }}</li>
             <li>{{partial "anchor.html" (dict "context" . "href" "https://braggfinancial.com/" "text" "Bragg Financial") }}</li>
             <li>{{partial "anchor.html" (dict "context" . "href" "https://dwellhomesupply.com/" "text" "Dwell Home Supply") }}</li>
             <li>{{partial "anchor.html" (dict "context" . "href" "https://ginaharris.remax.com/" "text" "Mayes Harris Realty") }}</li>
-            <li>{{partial "anchor.html" (dict "context" . "href" "#" "text" "Ginny Newell") }}</li>
-            <li>{{partial "anchor.html" (dict "context" . "href" "#" "text" "Ann and Ric Browning") }}</li>
             <li>{{partial "anchor.html" (dict "context" . "href" "https://plattnercustombuilders.com/" "text" "Plattner Builders") }}</li>
             <li>{{partial "anchor.html" (dict "context" . "href" "https://kathyrnlillyinteriors.com/" "text" "Kathyrn Lilly Interiors") }}</li>
             <li>{{partial "anchor.html" (dict "context" . "href" "https://www.marylib.com/" "text" "Richards Group Real Estate") }}</li>
@@ -198,8 +200,8 @@
           <header>Caring Neighbors</header>
           <ul>
             <li>{{partial "anchor.html" (dict "context" . "href" "https://lknortho.com/" "text" "Lake Norman Orthodontics") }}</li>
-            <li>{{partial "anchor.html" (dict "context" . "href" "https://whitscustard.com/locations/davidson" "text" "Whit’s (Annsley Ehret)") }}</li>
-            <li>{{partial "anchor.html" (dict "context" . "href" "https://www.kingcanarybrewing.com/" "text" "King Canary Brewing (Andrew)") }}</li>
+            <li>{{partial "anchor.html" (dict "context" . "href" "https://whitscustard.com/locations/davidson" "text" "Whit’s") }}</li>
+            <li>{{partial "anchor.html" (dict "context" . "href" "https://www.kingcanarybrewing.com/" "text" "King Canary Brewing") }}</li>
             <li>{{partial "anchor.html" (dict "context" . "href" "https://www.sidebarbottlecompany.com/" "text" "Side Bar") }}</li>
             <li>{{partial "anchor.html" (dict "context" . "href" "https://www.flatirononmain.com/" "text" "Flatiron") }}</li>
             <li>{{partial "anchor.html" (dict "context" . "href" "https://www.mandolinospizza.com/" "text" "Mandolino’s") }}</li>
